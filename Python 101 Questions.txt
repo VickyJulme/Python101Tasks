@@ -1,0 +1,994 @@
+Python 101 Questions and Answers
+1. Print Statements
+Question: How do you print "Hello, World!" in Python?
+
+Answer:
+
+python
+print("Hello, World!")
+2. Simple Arithmetic
+Question: How do you add two numbers in Python?
+
+Answer:
+
+python
+a = 10
+b = 5
+sum = a + b
+print(sum)  # Output: 15
+3. Variables
+Question: How do you assign a string to a variable?
+
+Answer:
+
+python
+name = "John"
+4. Data Types
+Question: What are the basic data types in Python?
+
+Answer:
+
+python
+integer_variable = 10  # Integer
+float_variable = 10.5  # Float
+string_variable = "Hello"  # String
+boolean_variable = True  # Boolean
+5. Lists
+Question: How do you create a list of fruits?
+
+Answer:
+
+python
+fruits = ["apple", "banana", "cherry"]
+6. Appending to a List
+Question: How do you add an item to a list?
+
+Answer:
+
+python
+fruits.append("orange")
+7. Dictionaries
+Question: How do you create a dictionary with keys "name" and "age"?
+
+Answer:
+
+python
+student = {"name": "Alice", "age": 20}
+8. Accessing Dictionary Values
+Question: How do you access the value of the key "name" in a dictionary?
+
+Answer:
+
+python
+print(student["name"])  # Output: 'Alice'
+9. Conditional Statements
+Question: How do you write an if-else statement to check if a number is positive or negative?
+
+Answer:
+
+python
+num = 10
+if num > 0:
+    print("Positive number")
+else:
+    print("Negative number")
+10. For Loops
+Question: How do you write a for loop that prints numbers 0 to 4?
+
+Answer:
+
+python
+for i in range(5):
+    print(i)
+11. While Loops
+Question: How do you write a while loop that prints numbers 0 to 4?
+
+Answer:
+
+python
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+12. Functions
+Question: How do you define a function that greets a user by name?
+
+Answer:
+
+python
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))
+13. Lambda Functions
+Question: How do you write a lambda function to double a number?
+
+Answer:
+
+python
+double = lambda x: x * 2
+print(double(5))  # Output: 10
+14. List Comprehensions
+Question: How do you create a list of squares using list comprehension?
+
+Answer:
+
+python
+squares = [x**2 for x in range(10)]
+print(squares)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+15. Dictionary Comprehensions
+Question: How do you create a dictionary of squares using dictionary comprehension?
+
+Answer:
+
+python
+square_dict = {x: x**2 for x in range(10)}
+print(square_dict)  # Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+16. File Writing
+Question: How do you write "Hello, file!" to a file?
+
+Answer:
+
+python
+with open("example.txt", "w") as file:
+    file.write("Hello, file!")
+17. File Reading
+Question: How do you read the contents of a file?
+
+Answer:
+
+python
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+18. Exception Handling
+Question: How do you handle a division by zero error?
+
+Answer:
+
+python
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+finally:
+    print("This will always execute.")
+19. Tuples
+Question: How do you create a tuple of fruits?
+
+Answer:
+
+python
+my_tuple = ("apple", "banana", "cherry")
+print(my_tuple)
+20. Sets
+Question: How do you create a set and add an item to it?
+
+Answer:
+
+python
+my_set = {"apple", "banana", "cherry"}
+my_set.add("orange")
+print(my_set)
+21. String Methods
+Question: How do you convert a string to lowercase?
+
+Answer:
+
+python
+greeting = "Hello, World!"
+print(greeting.lower())
+22. String Replacement
+Question: How do you replace "World" with "Python" in a string?
+
+Answer:
+
+python
+greeting = "Hello, World!"
+print(greeting.replace("World", "Python"))
+23. Modules
+Question: How do you import the math module and use the sqrt function?
+
+Answer:
+
+python
+import math
+print(math.sqrt(16))  # Output: 4.0
+24. Custom Modules
+Question: How do you create and use a custom module?
+
+Answer:
+
+python
+# my_module.py
+def add(a, b):
+    return a + b
+
+# main.py
+import my_module
+print(my_module.add(5, 3))  # Output: 8
+25. Classes
+Question: How do you define a class with an init method and a method that returns a greeting?
+
+Answer:
+
+python
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        return f"{self.name} says woof!"
+
+my_dog = Dog("Buddy", 3)
+print(my_dog.bark())  # Output: "Buddy says woof!"
+26. Inheritance
+Question: How do you create a subclass that inherits from a superclass?
+
+Answer:
+
+python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} says woof!"
+
+my_dog = Dog("Buddy")
+print(my_dog.speak())  # Output: "Buddy says woof!"
+27. Polymorphism
+Question: How do you use polymorphism with classes?
+
+Answer:
+
+python
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says meow!"
+
+my_cat = Cat("Whiskers")
+print(my_cat.speak())  # Output: "Whiskers says meow!"
+28. Encapsulation
+Question: How do you use encapsulation to protect data within a class?
+
+Answer:
+
+python
+class Car:
+    def __init__(self, make, model):
+        self.__make = make
+        self.__model = model
+
+    def get_make(self):
+        return self.__make
+
+    def get_model(self):
+        return self.__model
+
+my_car = Car("Toyota", "Corolla")
+print(my_car.get_make())  # Output: "Toyota"
+29. Decorators
+Question: How do you use decorators to modify functions?
+
+Answer:
+
+python
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+give till 101
+Absolutely, here are more questions to help you master Python. This will be a comprehensive set of 101 beginner-friendly Python questions with answers.
+
+1-28 are already provided above.
+29. Decorators
+Question: How do you use decorators to modify functions?
+
+Answer:
+
+python
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+30. Docstrings
+Question: How do you add a docstring to a function?
+
+Answer:
+
+python
+def my_function():
+    """This is a docstring."""
+    print("Hello, World!")
+
+print(my_function.__doc__)  # Output: This is a docstring.
+31. String Formatting
+Question: How do you use f-strings for string formatting?
+
+Answer:
+
+python
+name = "Alice"
+age = 30
+print(f"Hello, {name}. You are {age} years old.")  # Output: Hello, Alice. You are 30 years old.
+32. List Slicing
+Question: How do you slice a list to get the first three elements?
+
+Answer:
+
+python
+numbers = [0, 1, 2, 3, 4, 5]
+print(numbers[:3])  # Output: [0, 1, 2]
+33. List Comprehension with Condition
+Question: How do you use a condition in a list comprehension?
+
+Answer:
+
+python
+even_numbers = [x for x in range(10) if x % 2 == 0]
+print(even_numbers)  # Output: [0, 2, 4, 6, 8]
+34. Dictionary Methods
+Question: How do you get all the keys from a dictionary?
+
+Answer:
+
+python
+student = {"name": "Alice", "age": 20, "courses": ["Math", "Science"]}
+print(student.keys())  # Output: dict_keys(['name', 'age', 'courses'])
+35. Iterating Over a Dictionary
+Question: How do you iterate over dictionary keys and values?
+
+Answer:
+
+python
+for key, value in student.items():
+    print(key, value)
+36. String Splitting
+Question: How do you split a string into a list of words?
+
+Answer:
+
+python
+sentence = "Hello, world! How are you?"
+words = sentence.split()
+print(words)  # Output: ['Hello,', 'world!', 'How', 'are', 'you?']
+37. String Joining
+Question: How do you join a list of words into a single string?
+
+Answer:
+
+python
+words = ['Hello,', 'world!', 'How', 'are', 'you?']
+sentence = " ".join(words)
+print(sentence)  # Output: Hello, world! How are you?
+38. List Sorting
+Question: How do you sort a list of numbers in ascending order?
+
+Answer:
+
+python
+numbers = [5, 2, 9, 1, 5, 6]
+numbers.sort()
+print(numbers)  # Output: [1, 2, 5, 5, 6, 9]
+39. Reversing a List
+Question: How do you reverse a list?
+
+Answer:
+
+python
+numbers = [1, 2, 3, 4, 5]
+numbers.reverse()
+print(numbers)  # Output: [5, 4, 3, 2, 1]
+40. Set Operations
+Question: How do you find the union of two sets?
+
+Answer:
+
+python
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+union_set = set1.union(set2)
+print(union_set)  # Output: {1, 2, 3, 4, 5}
+41. Set Intersection
+Question: How do you find the intersection of two sets?
+
+Answer:
+
+python
+intersection_set = set1.intersection(set2)
+print(intersection_set)  # Output: {3}
+42. List Multiplication
+Question: How do you repeat a list three times?
+
+Answer:
+
+python
+numbers = [1, 2, 3]
+repeated_numbers = numbers * 3
+print(repeated_numbers)  # Output: [1, 2, 3, 1, 2, 3, 1, 2, 3]
+43. Filtering a List
+Question: How do you filter a list to include only even numbers?
+
+Answer:
+
+python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Output: [2, 4, 6]
+44. List Enumeration
+Question: How do you get the index and value while iterating over a list?
+
+Answer:
+
+python
+for index, value in enumerate(numbers):
+    print(index, value)
+45. String Reversal
+Question: How do you reverse a string?
+
+Answer:
+
+python
+word = "hello"
+reversed_word = word[::-1]
+print(reversed_word)  # Output: olleh
+46. Finding Elements in a List
+Question: How do you find the index of an element in a list?
+
+Answer:
+
+python
+numbers = [1, 2, 3, 4, 5]
+index = numbers.index(3)
+print(index)  # Output: 2
+47. Removing Elements from a List
+Question: How do you remove an element from a list?
+
+Answer:
+
+python
+numbers.remove(3)
+print(numbers)  # Output: [1, 2, 4, 5]
+48. List Length
+Question: How do you find the length of a list?
+
+Answer:
+
+python
+length = len(numbers)
+print(length)  # Output: 4
+49. File Line by Line
+Question: How do you read a file line by line?
+
+Answer:
+
+python
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+50. Checking File Existence
+Question: How do you check if a file exists?
+
+Answer:
+
+python
+import os
+if os.path.exists("example.txt"):
+    print("File exists")
+else:
+    print("File does not exist")
+51. Appending to a File
+Question: How do you append text to a file?
+
+Answer:
+
+python
+with open("example.txt", "a") as file:
+    file.write("\nAppending a new line.")
+52. Exception Types
+Question: What are some common exceptions in Python?
+
+Answer:
+
+python
+# ZeroDivisionError, FileNotFoundError, ValueError, TypeError
+53. Nested Lists
+Question: How do you access elements in a nested list?
+
+Answer:
+
+python
+nested_list = [[1, 2], [3, 4], [5, 6]]
+print(nested_list[1][0])  # Output: 3
+54. List of Dictionaries
+Question: How do you create a list of dictionaries?
+
+Answer:
+
+python
+students = [
+    {"name": "Alice", "age": 20},
+    {"name": "Bob", "age": 22}
+]
+55. Dictionary Update
+Question: How do you update a dictionary with another dictionary?
+
+Answer:
+
+python
+student.update({"grade": "A"})
+print(student)  # Output: {'name': 'Alice', 'age': 20, 'courses': ['Math', 'Science'], 'grade': 'A'}
+56. Dictionary Deletion
+Question: How do you delete a
+
+till 101
+give till 101
+Sure, let's continue from where we left off. Here are more beginner-friendly Python questions and their answers.
+
+Python 101 Questions and Answers
+1-56 are already provided above.
+57. Dictionary Deletion
+Question: How do you delete a key-value pair from a dictionary?
+
+Answer:
+
+python
+del student['age']
+print(student)  # Output: {'name': 'Alice', 'courses': ['Math', 'Science']}
+58. Set Difference
+Question: How do you find the difference between two sets?
+
+Answer:
+
+python
+difference_set = set1.difference(set2)
+print(difference_set)  # Output: {1, 2}
+59. Set Symmetric Difference
+Question: How do you find the symmetric difference between two sets?
+
+Answer:
+
+python
+sym_diff_set = set1.symmetric_difference(set2)
+print(sym_diff_set)  # Output: {1, 2, 4, 5}
+60. Copying Lists
+Question: How do you make a shallow copy of a list?
+
+Answer:
+
+python
+original = [1, 2, 3]
+copy = original.copy()
+print(copy)  # Output: [1, 2, 3]
+61. List Count
+Question: How do you count the occurrences of an element in a list?
+
+Answer:
+
+python
+numbers = [1, 2, 2, 3, 3, 3]
+count_2 = numbers.count(2)
+print(count_2)  # Output: 2
+62. String Length
+Question: How do you find the length of a string?
+
+Answer:
+
+python
+string = "Hello, World!"
+print(len(string))  # Output: 13
+63. List Concatenation
+Question: How do you concatenate two lists?
+
+Answer:
+
+python
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+concatenated = list1 + list2
+print(concatenated)  # Output: [1, 2, 3, 4, 5, 6]
+64. Nested Dictionary
+Question: How do you create a nested dictionary?
+
+Answer:
+
+python
+nested_dict = {
+    "name": "Alice",
+    "details": {
+        "age": 20,
+        "courses": ["Math", "Science"]
+    }
+}
+65. Global Variables
+Question: How do you access a global variable inside a function?
+
+Answer:
+
+python
+x = "global"
+
+def my_function():
+    global x
+    x = "local"
+    print(x)
+
+my_function()  # Output: local
+print(x)  # Output: local
+66. Default Arguments
+Question: How do you define a function with default arguments?
+
+Answer:
+
+python
+def greet(name, greeting="Hello"):
+    return f"{greeting}, {name}!"
+
+print(greet("Alice"))  # Output: Hello, Alice!
+print(greet("Bob", "Hi"))  # Output: Hi, Bob!
+67. Variable Length Arguments
+Question: How do you define a function that accepts variable length arguments?
+
+Answer:
+
+python
+def my_function(*args):
+    for arg in args:
+        print(arg)
+
+my_function(1, 2, 3)  # Output: 1, 2, 3
+68. Keyword Arguments
+Question: How do you define a function that accepts keyword arguments?
+
+Answer:
+
+python
+def my_function(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+my_function(name="Alice", age=25)  # Output: name: Alice, age: 25
+69. Map Function
+Question: How do you use the map function to double the numbers in a list?
+
+Answer:
+
+python
+numbers = [1, 2, 3, 4]
+doubled = list(map(lambda x: x * 2, numbers))
+print(doubled)  # Output: [2, 4, 6, 8]
+70. Filter Function
+Question: How do you use the filter function to get even numbers from a list?
+
+Answer:
+
+python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Output: [2, 4, 6]
+71. Reducing Lists
+Question: How do you use reduce to sum all numbers in a list?
+
+Answer:
+
+python
+from functools import reduce
+
+numbers = [1, 2, 3, 4]
+sum = reduce(lambda x, y: x + y, numbers)
+print(sum)  # Output: 10
+72. Zip Function
+Question: How do you use the zip function to combine two lists?
+
+Answer:
+
+python
+list1 = [1, 2, 3]
+list2 = ["a", "b", "c"]
+combined = list(zip(list1, list2))
+print(combined)  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+73. Enumerate Function
+Question: How do you use enumerate to get the index and value while iterating over a list?
+
+Answer:
+
+python
+items = ['a', 'b', 'c']
+for index, item in enumerate(items):
+    print(index, item)
+74. List Insertion
+Question: How do you insert an item into a list at a specific index?
+
+Answer:
+
+python
+numbers = [1, 2, 4, 5]
+numbers.insert(2, 3)
+print(numbers)  # Output: [1, 2, 3, 4, 5]
+75. List Clearing
+Question: How do you clear all items from a list?
+
+Answer:
+
+python
+numbers.clear()
+print(numbers)  # Output: []
+76. Dictionary Keys
+Question: How do you get all keys from a dictionary?
+
+Answer:
+
+python
+student = {"name": "Alice", "age": 20, "courses": ["Math", "Science"]}
+keys = student.keys()
+print(keys)  # Output: dict_keys(['name', 'age', 'courses'])
+77. Dictionary Values
+Question: How do you get all values from a dictionary?
+
+Answer:
+
+python
+values = student.values()
+print(values)  # Output: dict_values(['Alice', 20, ['Math', 'Science']])
+78. Sorting a Dictionary by Value
+Question: How do you sort a dictionary by its values?
+
+Answer:
+
+python
+import operator
+
+d = {'apple': 3, 'banana': 2, 'cherry': 5}
+sorted_d = dict(sorted(d.items(), key=operator.itemgetter(1)))
+print(sorted_d)  # Output: {'banana': 2, 'apple': 3, 'cherry': 5}
+79. Checking Substring
+Question: How do you check if a string contains a specific substring?
+
+Answer:
+
+python
+string = "Hello, world!"
+substring = "world"
+print(substring in string)  # Output: True
+80. String Startswith
+Question: How do you check if a string starts with a specific substring?
+
+Answer:
+
+python
+string = "Hello, world!"
+print(string.startswith("Hello"))  # Output: True
+81. String Endswith
+Question: How do you check if a string ends with a specific substring?
+
+Answer:
+
+python
+print(string.endswith("!"))  # Output: True
+82. String Find
+Question: How do you find the index of a substring in a string?
+
+Answer:
+
+python
+index = string.find("world")
+print(index)  # Output: 7
+83. **Joining Lists into String
+continue till 101
+Let's continue from where we left off and complete the list of 101 beginner-friendly Python questions with answers.
+
+Python 101 Questions and Answers
+1-82 are already provided above.
+83. Joining Lists into String
+Question: How do you join a list of words into a single string with spaces?
+
+Answer:
+
+python
+words = ["Hello", "world", "!"]
+sentence = " ".join(words)
+print(sentence)  # Output: Hello world !
+84. Splitting Strings
+Question: How do you split a string by spaces into a list of words?
+
+Answer:
+
+python
+sentence = "Hello world !"
+words = sentence.split()
+print(words)  # Output: ['Hello', 'world', '!']
+85. String Capitalization
+Question: How do you capitalize the first letter of a string?
+
+Answer:
+
+python
+word = "python"
+capitalized_word = word.capitalize()
+print(capitalized_word)  # Output: Python
+86. Removing Whitespace
+Question: How do you remove leading and trailing whitespace from a string?
+
+Answer:
+
+python
+string = "  Hello, World!  "
+trimmed_string = string.strip()
+print(trimmed_string)  # Output: Hello, World!
+87. Nested Loops
+Question: How do you use a nested loop to print a pattern?
+
+Answer:
+
+python
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()
+# Output:
+# *
+# **
+# ***
+# ****
+# *****
+88. Reading JSON Files
+Question: How do you read a JSON file into a Python dictionary?
+
+Answer:
+
+python
+import json
+
+with open("data.json", "r") as file:
+    data = json.load(file)
+print(data)
+89. Writing JSON Files
+Question: How do you write a Python dictionary to a JSON file?
+
+Answer:
+
+python
+import json
+
+data = {"name": "Alice", "age": 25}
+with open("data.json", "w") as file:
+    json.dump(data, file)
+90. Converting List to Set
+Question: How do you convert a list to a set to remove duplicates?
+
+Answer:
+
+python
+numbers = [1, 2, 2, 3, 4, 4, 5]
+unique_numbers = set(numbers)
+print(unique_numbers)  # Output: {1, 2, 3, 4, 5}
+91. Calculating Factorial
+Question: How do you calculate the factorial of a number using recursion?
+
+Answer:
+
+python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))  # Output: 120
+92. Finding the Maximum Value
+Question: How do you find the maximum value in a list?
+
+Answer:
+
+python
+numbers = [1, 5, 3, 9, 2]
+max_value = max(numbers)
+print(max_value)  # Output: 9
+93. Finding the Minimum Value
+Question: How do you find the minimum value in a list?
+
+Answer:
+
+python
+min_value = min(numbers)
+print(min_value)  # Output: 1
+94. Summing List Elements
+Question: How do you find the sum of all elements in a list?
+
+Answer:
+
+python
+total = sum(numbers)
+print(total)  # Output: 20
+95. Checking for Empty List
+Question: How do you check if a list is empty?
+
+Answer:
+
+python
+numbers = []
+if not numbers:
+    print("List is empty")
+96. Swapping Variables
+Question: How do you swap the values of two variables?
+
+Answer:
+
+python
+a = 5
+b = 10
+a, b = b, a
+print(a, b)  # Output: 10 5
+97. List to String Conversion
+Question: How do you convert a list of characters into a string?
+
+Answer:
+
+python
+char_list = ['P', 'y', 't', 'h', 'o', 'n']
+string = "".join(char_list)
+print(string)  # Output: Python
+
+
+
+
+98. Finding Substring in String
+Question: How do you check if a substring exists within a string?
+
+Answer:
+
+python
+sentence = "The quick brown fox jumps over the lazy dog."
+if "fox" in sentence:
+    print("Found!")
+99. Reversing a String
+Question: How do you reverse the words in a string?
+
+Answer:
+
+python
+sentence = "The quick brown fox"
+reversed_sentence = " ".join(reversed(sentence.split()))
+print(reversed_sentence)  # Output: fox brown quick The
+
+
+100. Flattening a Nested List
+Question: How do you flatten a nested list?
+
+Answer:
+
+python
+nested_list = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+flat_list = [item for sublist in nested_list for item in sublist]
+print(flat_list)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+101. Using List Comprehension for Filtering
+Question: How do you use list comprehension to filter a list of numbers to only include even numbers?
+
+Answer:
+
+python
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = [x for x in numbers if x % 2 == 0]
+print(even_numbers)  # Output: [2, 4, 6, 8, 10]
+There you go! These 101 questions and answers cover a wide range of fundamental Python concepts and tasks. Use them as a guide to strengthen your Python skills.
