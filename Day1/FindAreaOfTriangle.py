@@ -1,7 +1,7 @@
 # If a, b and c are three sides of a triangle. Then,
 #Herons fromula
 # s = (a+b+c)/2
-# area = (s*(s-a)*(s-b)*(s-c)) **5
+# area = (s*(s-a)*(s-b)*(s-c)) **0.5
 
 input1 =float(input("Enter First Side   :"))
 input2 =float(input("Enter Second Side   :"))
