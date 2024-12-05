@@ -6,6 +6,10 @@ Answer:
 
 python
 print("Hello, World!")
+
+
+
+
 2. Simple Arithmetic
 Question: How do you add two numbers in Python?
 
@@ -16,6 +20,10 @@ a = 10
 b = 5
 sum = a + b
 print(sum)  # Output: 15
+
+
+
+
 3. Variables
 Question: How do you assign a string to a variable?
 
@@ -23,6 +31,10 @@ Answer:
 
 python
 name = "John"
+
+
+
+
 4. Data Types
 Question: What are the basic data types in Python?
 
@@ -33,6 +45,10 @@ integer_variable = 10  # Integer
 float_variable = 10.5  # Float
 string_variable = "Hello"  # String
 boolean_variable = True  # Boolean
+
+
+
+
 5. Lists
 Question: How do you create a list of fruits?
 
